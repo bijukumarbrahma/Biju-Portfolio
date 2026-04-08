@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biju Kumar Brahma — Software Devloper & Designer</title>
+  <meta name="description" content="Software Engineer & UI/UX Designer crafting meaningful digital products." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-bar" id="scrollBar"></div>
+
+  <!-- Custom cursor -->
+  <div class="cursor-ring"  id="cursorRing"></div>
+  <div class="cursor-dot2"  id="cursorDot2"></div>
+
+  <!-- Particle canvas -->
+  <canvas id="starCanvas" aria-hidden="true"></canvas>
+
+  <!-- ══════════ NAVBAR ══════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+      <span class="logo-bracket">&lt;</span>Biju<span class="logo-bracket">/&gt;</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about"      class="nl"><em></em> About</a></li>
+        <li><a href="#experience" class="nl"><em></em> Work</a></li>
+        <li><a href="#projects"   class="nl"><em></em> Projects</a></li>
+        <li><a href="#contact"    class="nl"><em></em> Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <button id="themeBtn" class="theme-btn" aria-label="Toggle theme">
+          <span class="ti sun">&#9728;</span>
+          <span class="ti moon">&#9790;</span>
+        </button>
+        <a href="#contact" class="nav-hire">Hire Me</a>
+        <button id="menuBtn" class="menu-btn" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Full-screen mobile menu -->
+    <div class="mob-menu" id="mobMenu">
+      <div class="mob-links">
+        <a href="#about"      data-n="01" class="mob-link">About</a>
+        <a href="#experience" data-n="02" class="mob-link">Work</a>
+        <a href="#projects"   data-n="03" class="mob-link">Projects</a>
+        <a href="#contact"    data-n="04" class="mob-link">Contact</a>
+      </div>
+      <p class="mob-email">bijukumarbrahma154@gmail.com</p>
+    </div>
+  </nav>
+
+  <!-- ══════════ HERO ══════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hb-blob b1"></div>
+      <div class="hb-blob b2"></div>
+      <div class="hb-blob b3"></div>
+      <div class="hb-grid"></div>
+    </div>
+
+    <div class="hero-inner container">
+      <div class="hero-copy">
+
+        <div class="status-pill stagger-in" style="--i:0">
+          <span class="sp-dot"></span>
+          Available for opportunities
+        </div>
+
+        <h1 class="hero-h1 stagger-in" style="--i:1" aria-label="A Designer who Judges a book by its cover.">
+          <span class="h1 hl-1">A Designer</span>
+          <span class="hl hl-2">who <em>Judges</em></span>
+          <span class="hl hl-3">a book by its cover </span>
+        </h1>
+
+        <p class="hero-sub stagger-in" style="--i:2">
+         Respect the Designer
+        </p>
+
+        <div class="hero-btns stagger-in" style="--i:3">
+          <a href="#projects" class="btn-main">
+            View My Work
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+          <a href="#contact" class="btn-ghost">Let's Talk</a>
+        </div>
+
+        <div class="hero-tag stagger-in" style="--i:4">
+          <div class="ht-avatar">B</div>
+          <div>
+            <p class="ht-name">Biju Kumar Brahma</p>
+            <p class="ht-role">Developer @<a href="https://www.instagram.com/bijukumarbrahma" class="insta-link">Instagram ↗</a></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right side: stacked card -->
+      <div class="hero-card stagger-in" style="--i:1">
+        <div class="hc-shadow s1"></div>
+        <div class="hc-shadow s2"></div>
+        <div class="hc-main">
+          <div class="hcm-top">
+            <div class="hcm-avatar">👨‍💻</div>
+            <div class="hcm-live"><span class="live-dot"></span>Available</div>
+          </div>
+          <p class="hcm-name">Biju Kumar Brahma</p>
+          <p class="hcm-title">Software Developer ·  Designer</p>
+          <div class="hcm-chips">
+            <span>Web</span><span>App</span><span>Figma</span>
+          </div>
+          <div class="hcm-stats">
+            <div class="hs-item">
+              <span class="hs-val">15+</span>
+              <span class="hs-lbl">Projects</span>
+            </div>
+            <div class="hs-div"></div>
+            <div class="hs-item">
+              <span class="hs-val">2+</span>
+              <span class="hs-lbl">Years</span>
+            </div>
+            <div class="hs-div"></div>
+            <div class="hs-item">
+              <span class="hs-val">4.5★</span>
+              <span class="hs-lbl">Rating</span>
+            </div>
+          </div>
+          <!-- Mini skill bars -->
+          <div class="hcm-bars">
+            <div class="hb-row"><span>Website</span><div class="hb-track"><div class="hb-fill" style="--w:88%"></div></div></div>
+            <div class="hb-row"><span>Development</span><div class="hb-track"><div class="hb-fill" style="--w:75%"></div></div></div>
+            <div class="hb-row"><span>Research</span><div class="hb-track"><div class="hb-fill" style="--w:65%"></div></div></div>
+          </div>
+        </div>
+        <!-- Floating labels -->
+        <div class="float-pill fp1">Development ✦</div>
+        <div class="float-pill fp2">2+ yrs</div>
+        <div class="float-pill fp3">Flutter</div>
+      </div>
+    </div>
+
+    <a href="#about" class="scroll-hint" aria-label="Scroll down">
+      <div class="sh-wheel"></div>
+      <span>Scroll</span>
+    </a>
+  </section>
+
+  <!-- ══════════ ABOUT ══════════ -->
+  <section class="about section" id="about">
+    <div class="sec-num" aria-hidden="true">01</div>
+    <div class="container">
+      <div class="about-grid">
+
+        <div class="ag-left">
+          <p class="eyebrow reveal-up">About Me</p>
+          <h2 class="sec-h2 reveal-up" style="--d:.07s">
+            I'm a Full Stack<br>
+            <span class="grad-text">Developer</span>
+            <span class="tw-wrap"><span id="tw-el"></span><span class="tw-cur">|</span></span>
+          </h2>
+          <p class="at-company reveal-up" style="--d:.14s">
+            
+            <span class="fb-badge">
+            Currently focusing on building my Project.
+            </span>
+          </p>
+          <p class="at-bio reveal-up" style="--d:.21s">
+            A self-taught Full Stack Developer learning from buildng my own projects.
+            I build meaningful and delightful digital products that balance user
+            needs with business goals — from the first sketch to the final shipped pixel.
+          </p>
+          <a href="#contact" class="btn-main reveal-up" style="--d:.28s">
+            Get In Touch
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+
+        <div class="ag-right reveal-right">
+          <!-- Stats board -->
+          <div class="stats-board">
+            <div class="sb-item">
+              <span class="sb-val" data-target="2">0</span><span class="sb-plus">+</span>
+              <span class="sb-lbl">Years Experience</span>
+            </div>
+            <div class="sb-item">
+              <span class="sb-val" data-target="15">0</span><span class="sb-plus">+</span>
+              <span class="sb-lbl">Projects Delivered</span>
+            </div>
+            <div class="sb-item">
+              <span class="sb-val" data-target="5">0</span><span class="sb-plus">+</span>
+              <span class="sb-lbl">Happy Clients</span>
+            </div>
+            <div class="sb-item">
+              <span class="sb-val">4.6</span><span class="sb-plus">★</span>
+              <span class="sb-lbl">Average Rating</span>
+            </div>
+          </div>
+          <!-- Code snippet -->
+          <div class="code-snippet">
+            <div class="cs-bar"><span></span><span></span><span></span></div>
+            <pre class="cs-body"><span class="k">const</span> <span class="v">biju</span> = {
+  role:    <span class="s">"Build &amp; Design"</span>,
+  company: <span class="s">"No Brands"</span>,
+  years:   <span class="n">3</span>,
+  stack:   [<span class="s">"HTML5"</span>, <span class="s">"Python"</span>,
+            <span class="s">"Flutter"</span>],
+  open:    <span class="k">true</span> <span class="cm">// hire me!</span>
+};</pre>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ MARQUEE ══════════ -->
+  <div class="marquee-band" aria-hidden="true">
+    <div class="mb-track">
+      <span>Figma</span><span class="dot">✦</span>
+      <span>Flutter</span><span class="dot">✦</span>
+      <span>HTML5</span><span class="dot">✦</span>
+      <span>JavaScript</span><span class="dot">✦</span>
+      <span>UI/UX Design</span><span class="dot">✦</span>
+      <span>Python</span><span class="dot">✦</span>
+      <span>Webflow</span><span class="dot">✦</span>
+      <span>Blender</span><span class="dot">✦</span>
+      <span>After Effects</span><span class="dot">✦</span>
+      <span>Framer</span><span class="dot">✦</span>
+      <!-- dup -->
+      <span>Figma</span><span class="dot">✦</span>
+      <span>Flutter</span><span class="dot">✦</span>
+      <span>HTML5</span><span class="dot">✦</span>
+      <span>Java Script</span><span class="dot">✦</span>
+      <span>UI/UX Design</span><span class="dot">✦</span>
+      <span>Python</span><span class="dot">✦</span>
+      <span>Webflow</span><span class="dot">✦</span>
+      <span>Blender</span><span class="dot">✦</span>
+      <span>After Effects</span><span class="dot">✦</span>
+      <span>Framer</span><span class="dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ══════════ EXPERIENCE ══════════ -->
+  <section class="experience section" id="experience">
+    <div class="sec-num" aria-hidden="true">02</div>
+    <div class="container">
+      <p class="eyebrow reveal-up">Where I've Been</p>
+      <h2 class="sec-h2 reveal-up" style="--d:.07s">My journey as Developer&Designer.</h2>
+
+      <div class="timeline">
+
+        <article class="tl-card reveal-up" style="--d:.0s">
+          <div class="tlc-left">
+            <span class="tlc-year">2021 – 2022</span>
+            <div class="tlc-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+            </div>
+          </div>
+          <div class="tlc-body">
+            <div class="tlc-hd">
+              <h3>Computer Science</h3>
+              <span class="tlc-co">As Elective Subject </span>
+            </div>
+            <p>I Joined St.John H.S School, Barama. because there was good Computer Lab and I Started my Coding journey from that School.</p>
+            <div class="tlc-chips">
+              <span>Figma</span><span>React Native</span><span>User Research</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-card reveal-up" style="--d:.1s">
+          <div class="tlc-left">
+            <span class="tlc-year">2023 – 2027</span>
+            <div class="tlc-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+            </div>
+          </div>
+          <div class="tlc-body">
+            <div class="tlc-hd">
+              <h3>Bachalor in Computer Science</h3>
+              <span class="tlc-co">Pragjyotish College  · Guwahati</span>
+            </div>
+            <p>Collaborated cross-functionally to deliver pixel-perfect UI components and contribute to the design system adopted across 3 major products.</p>
+            <div class="tlc-chips">
+              <span>Design Systems</span><span>Prototyping</span><span>A/B Testing</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-card reveal-up" style="--d:.2s">
+          <div class="tlc-left">
+            <span class="tlc-year">2025</span>
+            <div class="tlc-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+            </div>
+          </div>
+          <div class="tlc-body">
+            <div class="tlc-hd">
+              <h3>Artificial Intelligence</h3>
+              <span class="tlc-co">Internship · Gauhati University</span>
+            </div>
+            <p>Conducted user interviews, usability studies and heuristic evaluations, translating findings into actionable improvements across 5 client products.</p>
+            <div class="tlc-chips">
+              <span>User Interviews</span><span>Heuristics</span><span>Wireframing</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="tl-card reveal-up" style="--d:.3s">
+          <div class="tlc-left">
+            <span class="tlc-year">2026</span>
+            <div class="tlc-icon">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </div>
+          </div>
+          <div class="tlc-body">
+            <div class="tlc-hd">
+              <h3>Anudip Foundation</h3>
+              <span class="tlc-co">Self-Employed</span>
+            </div>
+            <p>Designed brand identities, landing pages, and app interfaces for 15+ clients across fintech, health, and e-commerce sectors.</p>
+            <div class="tlc-chips">
+              <span>Branding</span><span>Web Design</span><span>Mobile UI</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ PROJECTS ══════════ -->
+  <section class="projects section" id="projects">
+    <div class="sec-num" aria-hidden="true">03</div>
+    <div class="container">
+      <p class="eyebrow reveal-up">Selected Work</p>
+      <h2 class="sec-h2 reveal-up" style="--d:.07s">Featured Projects</h2>
+
+      <!-- Project 1 -->
+      <article class="proj-row reveal-up">
+        <div class="pr-info">
+          <span class="pr-label">Featured — 01</span>
+          <h3 class="pr-name">Spotify Visualizer</h3>
+          <div class="pr-desc-box">
+            <p>A web app for visualizing personalized Spotify data. View your top artists, top tracks,
+               recently played tracks, and detailed audio information. Create and save playlists of
+               recommended tracks based on your existing ones.</p>
+          </div>
+          <div class="pr-stack">
+            <span>React</span><span>Node.js</span><span>Spotify API</span><span>Express</span>
+          </div>
+          <div class="pr-links">
+            <a href="#" class="pr-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+            <a href="#" class="pr-btn pr-btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+        <div class="pr-browser">
+          <div class="pb-bar">
+            <div class="pb-dots"><span></span><span></span><span></span></div>
+            <span class="pb-url">spotify-viz.app</span>
+          </div>
+          <div class="pb-screen pb-s1">
+            <div class="pbs-sidebar">
+              <div class="pbs-logo"></div>
+              <div class="pbs-nav"><div class="pbs-ni active"></div><div class="pbs-ni"></div><div class="pbs-ni"></div></div>
+            </div>
+            <div class="pbs-main">
+              <div class="pbs-h"></div>
+              <div class="pbs-sh"></div>
+              <div class="pbs-cards">
+                <div class="pbs-card c1"></div>
+                <div class="pbs-card c2"></div>
+                <div class="pbs-card c3"></div>
+              </div>
+              <svg class="pbs-wave" viewBox="0 0 220 40" preserveAspectRatio="none">
+                <polyline points="0,32 22,10 44,26 66,6 88,20 110,8 132,24 154,12 176,28 198,8 220,18"
+                  fill="none" stroke="rgba(139,92,246,0.7)" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Project 2 -->
+      <article class="proj-row proj-row-flip reveal-up" style="--d:.1s">
+        <div class="pr-browser">
+          <div class="pb-bar">
+            <div class="pb-dots"><span></span><span></span><span></span></div>
+            <span class="pb-url">analytics-dash.io</span>
+          </div>
+          <div class="pb-screen pb-s2">
+            <div class="pbs2-hd">
+              <div class="pbs2-title"></div>
+              <div class="pbs2-btn"></div>
+            </div>
+            <div class="pbs2-chart">
+              <div class="pbs2-bar" style="--bh:58%"></div>
+              <div class="pbs2-bar" style="--bh:82%"></div>
+              <div class="pbs2-bar" style="--bh:44%"></div>
+              <div class="pbs2-bar" style="--bh:68%"></div>
+              <div class="pbs2-bar" style="--bh:91%"></div>
+              <div class="pbs2-bar" style="--bh:54%"></div>
+              <div class="pbs2-bar" style="--bh:76%"></div>
+            </div>
+            <div class="pbs2-rows">
+              <div class="pbs2-row"></div><div class="pbs2-row"></div>
+            </div>
+          </div>
+        </div>
+        <div class="pr-info">
+          <span class="pr-label">Featured — 02</span>
+          <h3 class="pr-name">Track Analytics</h3>
+          <div class="pr-desc-box">
+            <p>A comprehensive analytics dashboard for tracking project metrics, team performance
+               and product KPIs in real time. Features interactive charts, exportable reports,
+               and role-based access control.</p>
+          </div>
+          <div class="pr-stack">
+            <span>TypeScript</span><span>PostgreSQL</span><span>Next.js</span><span>D3.js</span>
+          </div>
+          <div class="pr-links">
+            <a href="#" class="pr-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+              Code
+            </a>
+            <a href="#" class="pr-btn pr-btn-primary">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+              Live Demo
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ══════════ CONTACT ══════════ -->
+  <section class="contact section" id="contact">
+    <div class="sec-num" aria-hidden="true">04</div>
+    <div class="contact-glow"></div>
+    <div class="container contact-body">
+      <p class="eyebrow reveal-up">What's Next?</p>
+      <h2 class="contact-h2 reveal-up" style="--d:.07s">
+        Let's Build<br>
+        <span class="grad-text">Something Great</span>
+      </h2>
+      <p class="contact-sub reveal-up" style="--d:.14s">
+        I'm open to new opportunities. Whether you have a project in mind,
+        a role to fill, or just want to say hi — my inbox is always open.
+      </p>
+      <a href="mailto:bijukumarbrahma154@gmail.com" class="email-link reveal-up" style="--d:.21s">
+        bijukumarbrahma154@gmail.com
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </a>
+
+      <div class="ct-social reveal-up" style="--d:.28s">
+        <a href="https://github.com/bijukumarbrahma" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/biju-kumar-brahma-0969b0293?utm_source=share_via&utm_content=profile&utm_medium=member_android" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/bijukumarbrahma?igsh=b2d3aTltcTJ2Yj" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://x.com/bijukumarbrahma" class="social-link" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════ FOOTER ══════════ -->
+  <footer class="footer">
+    <div class="container footer-row">
+      <a href="#hero" class="f-logo" aria-label="Back to top">
+      </a>
+      <p class="f-copy">Designed &amp; Built by <span>Biju Kumar Brahma</span> ©2026 </p>
+      <p class="f-year"></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
